@@ -13,11 +13,7 @@ defmodule ListFilter do
     Enum.filter(list, fn e -> String.match?(e, ~r/\d/) end)
   end
 
-  defp convert_in_numbers(list) do
-    Enum.map(list, &String.to_integer/1)
-  end
+  defp convert_in_numbers(list), do: Enum.map(list, &String.to_integer/1)
 
-  defp filter_odds(list) do
-    Enum.filter(list, &Integer.is_odd/1)
-  end
+  defp filter_odds(list), do: Enum.filter(list, &Integer.is_odd/1)
 end
