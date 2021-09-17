@@ -14,10 +14,10 @@ defmodule ListFilter do
   end
 
   defp convert_in_numbers(list) do
-    Enum.map(list, fn e -> String.to_integer(e) end)
+    Enum.map(list, &String.to_integer/1)
   end
 
   defp filter_odds(list) do
-    Enum.filter(list, fn e -> Integer.is_odd(e) end)
+    Enum.filter(list, &Integer.is_odd/1)
   end
 end
